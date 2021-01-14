@@ -1,7 +1,8 @@
 # Example of Drones integration using CoppeliSim
 
-Download CoppeliSim and untar in this folder (examples/uav/)
-https://www.coppeliarobotics.com/files/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz
+Download CoppeliSim, you can use the script:
+
+		./examples/uav/install.sh
 
 ## Centralized and adhoc modes
 
