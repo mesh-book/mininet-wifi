@@ -3,59 +3,34 @@
 Download CoppeliSim and untar in this folder (examples/uav/)
 https://www.coppeliarobotics.com/files/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04.tar.xz
 
-## Centralized mode
+## Centralized and adhoc modes
 
-To run this example as a centralized mode, you will need 3 terminals.
+This example can run as a centralized or adhoc mode. 
 
-In terminal 1 run:
+Start mininet-wifi and select the corresponding mode as an argument (e.g., centralized, adhoc). 
 
-		sudo python examples/uav/uav_centralized.py
+For example, you can run the centralized scenario with the command:
 
-This will start mn-wifi and the simulation in CoppeliaSim.
+		sudo python examples/uav/drone.py centralized
 
-In Terminal 2 run:
+Or the adhoc scenario with the command:
 
-		sudo python examples/uav/simpleTest.py centralized
-
-This will start the remote API capturing the position of the drones in the simulation.
-
-In Terminal 3 run:
-
-		sudo python examples/uav/setstaposition.py
-
-This will read the positions of the drones and set the position of the stations.
-
-In the mininet graph, you can see that the stations' position is updated according to the drones.
-
-## adhoc mode
-
-To run this example as adhoc mode, you will need 2 terminals.
-
-In terminal 1 run:
-
-		sudo python examples/uav/uav_adhoc.py 
+		sudo python examples/uav/drone.py adhoc
 
 This will start mn-wifi and the simulation in CoppeliaSim.
 
-Then run
-
-		mininet-wifi> xterm api1
-
-In the new xterm terminal run:
-
-		python examples/uav/simpleTest.py adhoc
-
-This will start the remote API capturing the position of the drones in the simulation.
-
-In Terminal 2 run:
-
-		sudo python examples/uav/setstaposition.py
-
-This will read the positions of the drones and set the position of the stations.
+In parallel, it will start the remote API capturing the position of the drones in the simulation and read the positions of the drones to set the position of the stations.
 
 In the mininet graph, you can see that the stations' position is updated according to the drones.
 
 ---
 **NOTE**
-If there is an error to connect to CoppeliaSim socket, run sudo pkill -9 -f python
+
+If there is an error to connect to CoppeliaSim socket, run:
+		
+		sudo pkill -9 -f python
+
+If CoppeliaSim continue runing after finishing mininet-wifi execution, run:
+
+		sudo pkill -9 -f coppeliaSim
 ---
