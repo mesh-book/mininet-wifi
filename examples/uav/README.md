@@ -20,9 +20,18 @@ Or the adhoc scenario with the command:
 
 This will start mn-wifi and the simulation in CoppeliaSim.
 
-In parallel, it will start the remote API capturing the position of the drones in the simulation and read the positions of the drones to set the position of the stations.
+In parallel, it will start the remote API capturing the drones' position in the simulation and read the drones' positions to set the position of the stations.
 
 In the mininet graph, you can see that the stations' position is updated according to the drones.
+
+To verify the Drones' position in the simulation, run the getstaposition.py script with the station name (Only one station supported).
+
+For example, to verify the position of sta1 (Drone1) run:
+
+		sudo python examples/uav/getstaposition.py sta1		
+
+To see the position of all the drones, no pass any argument.
+
 
 ---
 **NOTE**

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Make sure to have the simpleTe running
+# Make sure to have the simpleTest running
 
 import sys
 import socket
@@ -26,7 +26,6 @@ def readdata(file,node):
 
 
 if __name__ == '__main__':
-    sys.argv
 
     nodes = []
     files = []

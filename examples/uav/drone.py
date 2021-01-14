@@ -95,7 +95,7 @@ def topology(args):
 
     info("*** Running CLI\n")
     
-    os.system('./examples/uav/CoppeliaSim_Edu_V4_0_0_Ubuntu18_04/coppeliaSim.sh -s examples/uav/simulation.ttt -gGUIITEMS_2 &')
+    os.system('./examples/uav/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04/coppeliaSim.sh -s examples/uav/simulation.ttt -gGUIITEMS_2 &')
     time.sleep(10)
 
     simpleTest = 'sudo python examples/uav/simpleTest.py ' + str(sta_drone_send) + ' &'
